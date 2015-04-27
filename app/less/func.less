@@ -1,0 +1,15 @@
+.generate-property(@step, @stop, @property, @value, @short, @i: 0) when (@i =< @stop) { // Условие выполнения!
+  // @step — шаг
+  // @stop — крайнее значение
+  // @property — свойство которое будем генерить
+  // @value — проценты, или пикселы
+  // @i — внутренний счетчик от 1 до @n
+  // @short — сокращение для наименования класса
+  @val: @i*@step;
+
+  .@{short}@{val} {
+    @{property} : @val*@value ;
+  }
+  // Рекурсовный самовызов с цвеличенным на 1 счетчиком
+  .generate-property(@step, @stop, @property, @value, @short, (@i + 1));
+}

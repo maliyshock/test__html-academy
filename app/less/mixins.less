@@ -1,0 +1,53 @@
+.position( @top, @right, @bottom, @left ){
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.size (@width, @height)
+{
+  width: @width;
+  height: @height;
+}
+
+.reset-link(){
+  text-decoration: none;
+  border-bottom: 1px solid;
+  line-height: normal;
+}
+
+.norm-bg(){
+  background-position: center top ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pseudo-class(){
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.no-borders(){
+  border: none;
+}
+
+.float-block(@top, @right, @bottom, @left, @position){
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+  position: @position;
+}
+
+.inline-block(){
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.font{
+  font-family:Continuum,Arial,sans-seri;
+}

@@ -1,0 +1,21 @@
+.row{
+  .make-row(0);
+  .clearfix();
+}
+
+.generate-columns(@n, @guitter, @i: 1) when (@i =< @n) { // Условие выполнения!
+  // @n — количество колонок
+  // @i — внутренний счетчик от 1 до @n
+  // Собственно, генерация
+  .col-@{i} {
+    width: (@i * 100% / @n);
+    margin-left: auto;
+    padding-left:  (@guitter/2);
+    padding-right: (@guitter/2);
+    float: left;
+  }
+  // Рекурсовный самовызов с цвеличенным на 1 счетчиком
+  .generate-columns(@n, @guitter, (@i + 1));
+}
+// Вызываем примесь
+.generate-columns(12, @col-guitter);

@@ -18,7 +18,9 @@
     "path": "^0.11.14",
     "wiredep": "^2.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-sftp": "^0.1.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

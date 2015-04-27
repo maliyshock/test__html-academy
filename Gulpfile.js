@@ -10,16 +10,19 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
     less = require('gulp-less'),
+    rename = require("gulp-rename"),
+    sftp = require('gulp-sftp'),
     wiredep = require('wiredep').stream;
 
 // сервер
 gulp.task('connect', function() {
     connect.server({
-        root: 'dist',
+        root: 'app',
         livereload: true
     });
     opn('http://localhost:8080/');
 });
+
 
 // как вызвана таска html, вызываем релоад
 gulp.task('html', function () {
@@ -35,10 +38,28 @@ gulp.task('css', function () {
 
 // лесс
 gulp.task('less', function () {
-    gulp.src('./less/**/*.less')
-        .pipe(less({}))
-        .pipe(minifyCSS())
-        .pipe(gulp.dest('./app/all.css'));
+  gulp.src('./app/less/index.less')
+      .pipe(less({}))
+      .pipe(autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'opera 12', 'Firefox 17', 'ie 7']}))
+      .pipe(gulp.dest('./app/css'));
+});
+
+//копируем файлы
+gulp.task('copy-index-html', function() {
+  gulp.src('./app/index.html')
+    // Perform minification tasks, etc here
+      .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('copy-fonts', function() {
+  gulp.src('./app/fonts/*')
+      .pipe(gulp.dest('./dist/fonts'));
+});
+
+
+gulp.task('copy-imgs', function() {
+  gulp.src('./app/i/*')
+      .pipe(gulp.dest('./dist/i'));
 });
 
 
@@ -46,6 +67,7 @@ gulp.task('less', function () {
 gulp.task('watch', function () {
     gulp.watch(['./app/*.html'], ['html']);
     gulp.watch(['./app/css/*.css'], ['css']);
+    gulp.watch(['./app/less/*.less'], ['less']);
 });
 
 
@@ -55,12 +77,12 @@ gulp.task('wiredep', function () {
         .pipe(wiredep({
             directory: './app/bower_components'
         }))
-        .pipe(gulp.dest('./app'));
+        .pipe(gulp.dest('./dist'));
 });
 
 // Очистка
 gulp.task('clean', function () {
-    return gulp.src('dist', {read: false}).pipe(clean());
+    return gulp.src('dist/*', {read: false}).pipe(clean());
 });
 
 // DIST !!!
@@ -73,6 +95,15 @@ gulp.task('dist', function () {
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('sftp', function () {
+  return gulp.src('src/*')
+      .pipe(sftp({
+        host: '',
+        user: '',
+        pass: ''
+      }));
 });
 
 

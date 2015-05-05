@@ -19,6 +19,7 @@
     "wiredep": "^2.2.2"
   },
   "devDependencies": {
+    "gulp-less": "^3.0.3",
     "gulp-sftp": "^0.1.4"
   },
   "scripts": {

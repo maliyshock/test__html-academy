@@ -6,31 +6,63 @@
 
         <!-- build:css css/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="css1.css" />
-        <link rel="stylesheet" href="css2.css" />
+        <!--<link rel="stylesheet" href="css1.css" />-->
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:css css/castom.css -->
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/buttons.css">
         <!-- endbuild -->
     </head>
 
     <body>
+
+
+    <div class="slider-wrapper">
+        <div class="slider-inner" id="js-rotator">
+            <div class="frame-wrapper js-frame-wrapper">
+                <ul class="fz0 slide-list">
+                    <li  class="frame__item">
+                        <a class="js-frame frame" href="#путь">
+                            <img class="slide js-slide" src="i/1-slide.png" id="js-first-slide" alt=""  />
+                        </a>
+                    </li>
+
+                    <li class="frame__item">
+                        <a class="js-frame frame" href="#путь">
+                            <img class="slide js-slide" src="i/1-slide.png" alt="" />
+                        </a>
+                    </li>
+
+                    <li class="frame__item">
+                        <a class="js-frame frame" href="#путь">
+                            <img class="slide js-slide" src="i/1-slide.png" alt="" />
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="navigate row">
+            <a class="rotator-button rotator-button--backward js-rotator-button js-backward" href="#"></a>
+            <a class="rotator-button rotator-button--forward js-rotator-button js-forward" href="#"></a>
+        </div>
+    </div> <!-- slider-wrapper-->
+
+
 
     </body>
 
     <!-- build:js js/build.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/js2.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js js/castom.js -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/scripts.js"></script>
+
     <!-- endbuild -->
 
 </html>

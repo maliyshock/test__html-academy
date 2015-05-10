@@ -20,7 +20,7 @@ gulp.task('connect', function() {
         root: 'app',
         livereload: true
     });
-    opn('http://localhost:8080/');
+    opn('http://localhost:8080/index.html');
 });
 
 
@@ -108,4 +108,4 @@ gulp.task('sftp', function () {
 
 
 //default
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['less', 'connect', 'watch']);

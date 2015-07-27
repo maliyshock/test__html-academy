@@ -66,8 +66,8 @@ gulp.task('copy-imgs', function() {
 //приглядываем за файлами, вызываем релоады
 gulp.task('watch', function () {
     gulp.watch(['./app/*.html'], ['html']);
-    gulp.watch(['./app/css/*.css'], ['css']);
-    gulp.watch(['./app/less/*.less'], ['less']);
+        gulp.watch(['./app/less/*.less', './app/less/**/*.less'], ['less']);
+    gulp.watch(['./app/js/*.js'], ['js']);
 });
 
 

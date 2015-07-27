@@ -36,6 +36,12 @@ gulp.task('css', function () {
         .pipe(connect.reload());
 });
 
+// как вызвана таска css, вызываем релоад
+gulp.task('js', function () {
+    gulp.src('./app/js/*.js')
+        .pipe(connect.reload());
+});
+
 // лесс
 gulp.task('less', function () {
   gulp.src('./app/less/index.less')

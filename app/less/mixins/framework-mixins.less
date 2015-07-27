@@ -27,8 +27,10 @@
 .pseudo-elem(){
   content: '';
   position: absolute;
-  display: none;
+  display: block;
 }
+
+
 
 .no-borders(){
   border: none;
@@ -75,4 +77,80 @@
   border-top: @height*1px solid @color;
   border-left: @width/2px solid transparent;
   border-right: @width/2px solid transparent;
+}
+
+.h-paddings{
+  padding-left:@hpaddings;
+  padding-right:@hpaddings;
+
+}
+
+.inlined{
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.cover-me(@bg, @color){
+  &:hover{
+    background: @bg;
+    color:@color;
+  }
+  transition: all 0.3s ease;
+}
+
+.background(@color){
+  background-color: @color;
+  & when (lightness(@color) >= 50%) {
+    & *, &{
+      color: @violet;
+    }
+
+    &.icon:hover{
+      background-color: @violet;
+      border-color: @violet;
+      color: #fff;
+    }
+  }
+  & when (lightness(@color) < 50%) {
+    & *, &{
+      color: #fff;
+    }
+
+    &.icon:hover{
+      background-color: @yellow;
+      border-color: @yellow;
+      color: #fff;
+    }
+
+  }
+}
+
+.transition(@time, @time-func, @property:all){
+  transition: @property @time @time-func;
+
+}
+
+.rounded(@width, @height, @bd-width){
+  width: @width;
+  height:@height;
+  border-radius:@width;
+
+  border: @bd-width solid;
+}
+
+
+
+.font-size{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.marginStartFix{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.transition{
+  transition: all 0.3s ease;
 }

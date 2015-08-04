@@ -17,6 +17,51 @@
 
     <body>
 
+        <!-- Modal -->
+        <div class="popup js-popup js-popup-registr">
+            <div class="popup__inner ">
+
+                <div class="popup__body ">
+                    <div class="">
+
+                        <div data-target="js-popup-registr" class="js-close popup-close icon icon--close"></div>
+
+                        <div class="milked">
+                            <div class="popup__h2 h2">ЛИЧНЫЙ КАБИНЕТ</div>
+                            <p class="popup__text">Ведите пожалуйста свой логин и пароль
+                                Если вы забыли пароль</p>
+
+                            <form class="popup__form form" action="">
+                                <div class="row form__row  form__row--icon form__row--login">
+                                    <input class="form__input form__input--icon" type="text" placeholder="Логин"/>
+                                </div>
+
+                                <div class="row form__row form__row--icon form__row--pass">
+                                    <input class="form__input form__input--icon" type="text" placeholder="Пароль"/>
+                                </div>
+
+                                <div class="form__row">
+                                    <input type="checkbox" class="checkbox" name="" id="rememberMe"/>
+                                    <label class="checkbox__label" for="rememberMe">Запомните меня</label>
+
+                                    <a class="fright link--black " href="">Я забыл пароль</a>
+                                </div>
+
+                                <input type="submit" class="btn mt10" value="Войти"/>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- wrapper/-->
+
+                </div>
+                <!-- popup__body/-->
+
+            </div>
+            <!-- popup__inner about-us/-->
+        </div>
+        <!-- popup/-->
+
         <header>
             <div class="wrapper">
                 <div class="row">
@@ -43,7 +88,7 @@
                         </ul>
                     </nav>
 
-                    <button class="btn btn-login fright">Войти</button>
+                    <button data-target="js-popup-registr" class="btn btn-login fright js-popup-open">ВХОД</button>
                 </div>
             </div>
             <!-- wrapper/-->

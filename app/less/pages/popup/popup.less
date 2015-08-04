@@ -1,14 +1,117 @@
 .popup{
   position: fixed;
-  left: 100%;
   top: 0;
-  z-index: @four-layer;
+  z-index: 10;
   width: 100%;
   min-height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+}
+
+.popup__inner{
+  text-align: center;
+}
+
+.popup__body{
+  padding: 30px;
+  border-radius: 4px;
+  position: absolute;
+  width: 520px;
+  left: 50%;
+  margin-left: -260px;
+  top: 10%;
+
 }
 
 .popup-close{
+  width: 43px;
+  height: 43px;
   position: absolute;
-  top: 25px;
-  right: 0;
+  cursor: pointer;
+  top: 30px;
+  left: 100%;
+  margin-left: -30px;
+  .sprite;
+  background-position: -24px -130px;
+}
+
+.form__input--icon{
+  padding-right: 39px;
+}
+
+.form__row--icon{
+  position: relative;
+
+  &:after{
+    .pseudo-elem;
+    .sprite;
+    width: 21px;
+    height: 21px;
+    top: 8px;
+    right: 10px;
+  }
+}
+
+.form__row--pass:after{
+  background-position: -43px -172px;
+}
+
+
+.form__row--login:after{
+  background-position: -23px -172px;
+}
+
+.popup__form{
+  text-align: left;
+  margin-top: 30px;
+}
+
+.popup__h2{
+  text-align: left;
+}
+.link--black{
+  color: #000;
+}
+
+.form__row--login{
+  margin-bottom: 9px;
+}
+
+
+.popup__text{
+  text-align: left;
+}
+
+.subscribe__form{
+  &>*+*{
+    margin-top: 20px;
+  }
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+
+.checkbox__label{
+
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+
+  &:after{
+    .pseudo-elem;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 22px;
+    height: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+
+  }
+}
+.checkbox:checked + .checkbox__label:after{
+  .sprite;
+  background-position: -26px -196px;
 }

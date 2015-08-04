@@ -14,6 +14,15 @@ var gulp = require('gulp'),
     sftp = require('gulp-sftp'),
     wiredep = require('wiredep').stream;
 
+
+function swallowError (error) {
+
+    //If you want details of the error in the console
+    console.log(error.toString());
+
+    this.emit('end');
+}
+
 // сервер
 gulp.task('connect', function() {
     connect.server({
@@ -46,8 +55,10 @@ gulp.task('js', function () {
 gulp.task('less', function () {
   gulp.src('./app/less/index.less')
       .pipe(less({}))
+      .on('error', swallowError)
       .pipe(autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'opera 12', 'Firefox 17', 'ie 7']}))
-      .pipe(gulp.dest('./app/css'));
+      .pipe(gulp.dest('./app/css'))
+      .pipe(connect.reload());
 });
 
 //копируем файлы

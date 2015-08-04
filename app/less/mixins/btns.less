@@ -1,0 +1,49 @@
+.btn-parent{
+  .font-bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0 @col-guitter/2;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn{
+  .btn-parent;
+  background: #000;
+  &:hover, &:focus{
+    background-color: @brown;
+  }
+}
+
+.btn-login{
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 72px;
+  position: relative;
+  width: auto;
+  min-width: 100px;
+  padding: 0;
+  &:hover{
+    background-color: transparent;
+  }
+  &:after{
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 5px;
+    .pseudo-elem;
+    .sprite;
+    width: 17px;
+    height: 17px;
+    background-position: -5px 0;
+  }
+}
+

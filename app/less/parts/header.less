@@ -1,0 +1,32 @@
+.main-navigation{
+  display: inline-block;
+}
+
+.main-navigation__list{
+  list-style-type: none;
+  font-size: 0;
+  padding: 0;
+}
+
+.main-navigation__item{
+  .inline-block;
+  &+&{
+    margin-left: 45px;
+  }
+}
+
+.main-navigation__link{
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 68px;
+  text-align: center;
+  color: #fff;
+  .inline-block;
+  border-bottom: 4px solid transparent;
+
+
+
+  &:hover{
+    border-bottom: 4px solid white;
+  }
+}

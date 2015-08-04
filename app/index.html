@@ -2,53 +2,244 @@
 <html>
     <head lang="ru">
         <meta charset="UTF-8">
-        <title></title>
+        <title h2></title h2>
 
         <!-- build:css css/vendor.css -->
         <!-- bower:css -->
-        <!--<link rel="stylesheet" href="css1.css" />-->
+        <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:css css/castom.css -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
         <!-- endbuild -->
     </head>
 
     <body>
 
+        <header>
+            <div class="wrapper">
+                <div class="row">
+                    <nav class="main-navigation ">
+                        <ul class="main-navigation__list">
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__link" href="">ГЛАВНАЯ</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__link" href="">ИНФОРМАЦИЯ</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__link" href="">НОВОСТИ</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__link" href="">ПРАЙС-ЛИСТ</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__link" href="">МАГАЗИН</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__link" href="">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-    <!--<div class="slider-wrapper">-->
-        <!--<div class="slider-inner" id="js-rotator">-->
-            <!--<div class="frame-wrapper js-frame-wrapper">-->
-                <!--<ul class="fz0 slide-list">-->
-                    <!--<li  class="frame__item">-->
-                        <!--<a class="js-frame frame" href="#путь">-->
-                            <!--<img class="slide js-slide" src="i/1-slide.png" id="js-first-slide" alt=""  />-->
-                        <!--</a>-->
-                    <!--</li>-->
+                    <button class="btn btn-login fright">Войти</button>
+                </div>
+            </div>
+            <!-- wrapper/-->
+        </header>
 
-                    <!--<li class="frame__item">-->
-                        <!--<a class="js-frame frame" href="#путь">-->
-                            <!--<img class="slide js-slide" src="i/1-slide.png" alt="" />-->
-                        <!--</a>-->
-                    <!--</li>-->
+    <div class="wrapper">
+        <section class="main-screen">
+            <div class="main-screen__logo"></div>
 
-                    <!--<li class="frame__item">-->
-                        <!--<a class="js-frame frame" href="#путь">-->
-                            <!--<img class="slide js-slide" src="i/1-slide.png" alt="" />-->
-                        <!--</a>-->
-                    <!--</li>-->
+            <div class="main-screen__item col-xs-4 pl0">
+                <div class="main-screen__title h2">БЫСТРО</div>
+                <div class="main-screen__text">
+                    <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
+                </div>
+            </div>
+            <!-- main-screen__item/-->
 
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
+            <div class="main-screen__item col-xs-4">
+                <div class="main-screen__title h2">КРУТО</div>
+                <div class="main-screen__text">
+                    <p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.
+                        МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО!
+                        ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
+                    </p>
+                </div>
+            </div>
+            <!-- main-screen__item/-->
 
-        <!--<div class="navigate row">-->
-            <!--<a class="rotator-button rotator-button--backward js-rotator-button js-backward" href="#"></a>-->
-            <!--<a class="rotator-button rotator-button--forward js-rotator-button js-forward" href="#"></a>-->
-        <!--</div>-->
-    <!--</div> &lt;!&ndash; slider-wrapper&ndash;&gt;-->
+            <div class="main-screen__item col-xs-4 pr0">
+                <div class="main-screen__title h2">ДОРОГО</div>
+                <div class="main-screen__text">
+                    <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+                </div>
+            </div>
+            <!-- main-screen__item/-->
+        </section>
+        <!-- main-screen/-->
+
+
+
+        <div class="row milked ">
+            <section class="news-block col-xs-5">
+                <div class="news-block__title h2">НОВОСТИ</div>
+
+                <div class="news-block__item">
+                    <div class="news-block__anonce">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</div>
+                    <time class="news-block__data">25 сентября</time>
+                </div>
+
+                <div class="news-block__item">
+                    <div class="news-block__anonce">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДЕТЕЛЬ МНОЖЕТСВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</div>
+                    <time class="news-block__data">19 сентября</time>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6 pl0">
+                        <a class="btn " href="">Все новости</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="photogallary col-xs-offset-2 col-xs-5">
+                <div class="photogallary__title h2">ФОТОГАЛЕРЕЯ</div>
+                <div class="photogallary__slider">
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img class="slider__img" src="img/img.jpg" alt=""/>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img class="slider__img" src="img/img.jpg" alt=""/>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img class="slider__img" src="img/img.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider__navigation">
+                        <!-- If we need navigation buttons -->
+                        <div class="row">
+                            <div class="col-xs-6 pl0    ">
+                                <div class="swiper-button-prev">Назад</div>
+                            </div>
+
+                            <div class="col-xs-6 pr0">
+                                <div class="swiper-button-next">Вперед</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- row/-->
+
+
+
+        <div class="row milked">
+            <section class="contacts col-xs-5">
+                <div class="contacts__title h2">КОНТАКТНАЯ ИНФОРМАЦИЯ</div>
+                <div class="contacts__text">
+
+                    <p>БАРБЕРШОП «БОРОДИНСКИЙ» <br/>
+                        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br/>
+                        ТЕЛЕФОН: +7 (495) 666-02-66</p>
+
+                    <p>ВРЕМЯ РАБОТЫ: <br/>
+                        ПН — ПТ: С 10:00 ДО 22:00 <br/>
+                        СБ — ВС: С 10:00 ДО 19:00</p>
+
+                    <div class="row">
+                        <div class="col-xs-6 pl0">
+                            <a class="btn " href="">Как проехать</a>
+                        </div>
+
+                        <div class="col-xs-6 pr0">
+                            <a class="btn " href="">Обратная связь</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="registrer col-xs-offset-2 col-xs-5">
+                <div class="registrer__title h2">Записаться</div>
+                <div class="registrer__text">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</div>
+
+                <form class="form" action="">
+                    <div class="row form__row">
+                        <div class="col-xs-6 pl0">
+                            <input class="form__input" type="text" placeholder="Дата"/>
+                        </div>
+                        <div class="col-xs-6 pr0">
+                            <input class="form__input" type="text" placeholder="Время"/>
+                        </div>
+                    </div>
+
+                    <div class="row form__row">
+                         <div class="col-xs-6 pl0">
+                            <input class="form__input" type="text" placeholder="Ваше имя"/>
+                         </div>
+
+                         <div class="col-xs-6 pr0">
+                            <input class="form__input" type="tel" placeholder="Телефон"/>
+                         </div>
+                    </div>
+
+                    <input type="submit" class="btn mt30" value="Отправить"/>
+                </form>
+            </section>
+        </div>
+        <!-- row/-->
+
+    </div>
+    <!-- wrapper/-->
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-xs-5 footer__info pl0">
+                    <p>БАРБЕРШОП «БОРОДИНСКИЙ» <br/>
+                    АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br/>
+                    <a href="#">КАК НАС НАЙТИ?</a>
+                        <br/>
+                    ТЕЛЕФОН: +7 (495) 666-02-66</p>
+                </div>
+
+                <div class="col-xs-2 col-xs-offset-1 no-paddings">
+                    <h3 class="footer__title">Давайте дружить!</h3>
+                    <ul class="socials">
+                        <li class="socials__item">
+                            <a class="socials__link socials__link--vk" href=""></a>
+                        <li class="socials__item">
+                            <a class="socials__link socials__link--fb" href=""></a>
+                        </li>
+
+                        <li class="socials__item">
+                            <a class="socials__link socials__link--inst" href=""></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-2 col-xs-offset-2 footer__copyright pr0">
+                    <h3 class="footer__title" >Разработано:</h3>
+                    <a class="btn" href="">htmlacademy.ru</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
 
 
 
@@ -56,7 +247,9 @@
 
     <!-- build:js js/build.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 

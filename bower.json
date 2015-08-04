@@ -1,5 +1,5 @@
 {
-  "name": "Aerostat_full",
+  "name": "Html_Academy",
   "version": "0.0.0",
   "authors": [
     "Denis Maliyshock <maliy-shock@yandex.ru>"
@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.3",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "swiper": "~3.1.0"
   }
 }

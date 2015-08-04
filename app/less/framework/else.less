@@ -13,8 +13,25 @@ html, body{
   overflow-x: hidden;
   position: relative;
   font-size: 14px;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'ptsn-700', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  line-height: 24px;
 
+}
+
+body{
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+}
+
+header{
+  background: black;
+}
+
+a{
+  color: #fff;
 }
 
 .float-container{
@@ -31,4 +48,41 @@ html, body{
   left: 0;
   top: 0;
   z-index: @second-layer;
+}
+
+.backgrounded{
+  background-image: url(../img/noise.jpg);
+  color: #000;
+}
+
+.separated{
+  section+section{
+    position: relative;
+    &:after{
+      .pseudo-elem;
+      width: 15px;
+      height: 270px;
+      .sprite;
+      top: 0;
+      left: -16.66666667%;
+      margin-left: -15px;
+      background-position: 0px -37px;
+    }
+  }
+}
+
+.paddinged{
+  .h-paddings;
+  .v-paddings;
+
+}
+
+.milked{
+  .backgrounded;
+  .separated;
+  .paddinged;
+
+  &+&{
+    margin-top: 35px;
+  }
 }

@@ -17,7 +17,7 @@
 
     <body>
 
-        <!-- Modal -->
+        <!-- registr -->
         <div class="popup js-popup js-popup-registr">
             <div class="popup__inner ">
 
@@ -61,6 +61,29 @@
             <!-- popup__inner about-us/-->
         </div>
         <!-- popup/-->
+
+
+
+        <!-- map -->
+        <div class="popup js-popup js-popup-map">
+            <div class="popup__inner ">
+
+                <div class="popup__body popup__body--mapped">
+                    <div data-target="js-popup-map" class="js-close popup-close icon icon--close"></div>
+
+                    <div class="milked">
+                        <div class="popup__map" id="js-map"></div>
+                    </div>
+
+                </div>
+                <!-- popup__body/-->
+
+            </div>
+            <!-- popup__inner about-us/-->
+        </div>
+        <!-- popup/-->
+
+
 
         <header>
             <div class="wrapper">
@@ -206,7 +229,7 @@
 
                     <div class="row">
                         <div class="col-xs-6 pl0">
-                            <a class="btn " href="">Как проехать</a>
+                            <a class="btn js-popup-open" data-target="js-popup-map"  href="">Как проехать</a>
                         </div>
 
                         <div class="col-xs-6 pr0">
@@ -294,6 +317,10 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMsysmQbyBoxt9mOWr85kddpriDTnTbFI">
+    </script>
 
     <!-- endbower -->
     <!-- endbuild -->

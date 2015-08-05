@@ -34,4 +34,30 @@ $('document').ready(function(){
         $('.'+target).fadeIn();
     });
 
+
+
+
+
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(59.860975,30.319855);
+
+        var mapOptions = {
+            center: myLatlng,
+            zoom: 15
+        };
+
+        var map = new google.maps.Map(document.getElementById('js-map'),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Это Питер Детка!',
+            animation: google.maps.Animation.DROP,
+        });
+
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
 });

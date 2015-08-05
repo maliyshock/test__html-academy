@@ -1235,7 +1235,7 @@ h5 + h5 {
 .popup {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 15;
   width: 100%;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
@@ -1328,6 +1328,18 @@ input[type="checkbox"] {
 .checkbox:checked + .checkbox__label:after {
   background-image: url(../img/sprite.png);
   background-position: -26px -196px;
+}
+.popup__map {
+  height: 560px;
+  margin: 0;
+  padding: 0;
+}
+.popup__body--mapped {
+  width: 780px;
+  margin-left: -390px;
+}
+.popup__body--mapped .milked {
+  padding: 7px;
 }
 * {
   -moz-box-sizing: border-box;
